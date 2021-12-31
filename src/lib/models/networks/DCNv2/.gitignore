@@ -4,3 +4,8 @@
 *.o
 *pyc
 _ext
+build
+DCNv2.egg-info
+dist
+vendor/
+
