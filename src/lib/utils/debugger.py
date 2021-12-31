@@ -62,6 +62,10 @@ class Debugger(object):
       self.focal_length = 721.5377
       self.W = 1242
       self.H = 375
+    elif num_classes == 1 or dataset == 'fformation':
+      self.names = fformation_class_name
+      self.W = 1024
+      self.H = 1024
     num_classes = len(self.names)
     self.down_ratio=down_ratio
     # for bird view
@@ -427,6 +431,7 @@ class Debugger(object):
                       lineType=cv2.LINE_AA)
     self.imgs[img_id] = bird_view
 
+fformation_class_name = ["person"]
 
 kitti_class_name = [
   'p', 'v', 'b'
